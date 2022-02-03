@@ -22,6 +22,11 @@ export interface MyLabelProps{
    * Cambiar color de la fuente
    */
    fontColor?:string
+   /**
+   * Cambiar color del backgorundcolor
+   */
+
+  background?:string
 }
 
 export const Mylabel = ({
@@ -29,13 +34,14 @@ export const Mylabel = ({
   size='normal',
   color='primary',
   allCaps=false,
-  fontColor=''
+  fontColor='',
+  background=''
 }:MyLabelProps) => {
   return (
-  
     <span className={ `label ${ size } text-${color}`  }
       style={{
-        color:fontColor
+        color:fontColor,
+        backgroundColor:background
       }}
     >
       {
